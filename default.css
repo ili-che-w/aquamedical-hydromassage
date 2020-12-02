@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  padding: 0;
+  /*background-image: url(file:///C:/Users/vantusssss/Downloads/interface.jpg);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  font: 20pt sans-serif
+}
+
+header,
+main {
+  display: grid;
+  grid-template-columns: 5fr 13fr
+}
+
+header,
+footer {
+  background-color: #00457c;
+  color: #96cbdb
+}
+
+.clock {
+  width: max-content;
+  margin-right: 1.2em;
+  margin-left: auto;
+  font-size: 24pt;
+  padding: 0.65em 0
+}
+
+.logo {
+  display: flex;
+  background-color: black
+}
+
+.logo>img {
+  display: block;
+  width: 90%;
+  height: initial;
+  margin: auto
+}
+
+.content {
+  /*width: max-content;*/
+  width: 100%;
+
+  /* Прописываю выравнивание текста здесь, чтобы унаследовался всем элементам */
+  /* Кстати, обрати внимание, на контрол это тоже влияет */
+  text-align:center;
+
+  /* А это прописываю, чтобы потом отцентровать все элементы внутри .content */
+  display: flex;
+
+  background:url("bubles.png");
+  /*background-size: cover;*/
+}
+
+/* margin:auto в сочетании с display:flex делает центровку по горизонтали и вертикали */
+.content > div {
+  margin: auto;
+}
+
+figure {
+  margin: 0
+}
+
+.buttons_title {
+  margin: 0;
+  background-color: red;
+  color: white;
+  font-size: 36pt;
+  padding: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase
+}
+#buttons > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+button {
+  margin: 0;
+  border: 0; /* Чтобы перекрыть дефолтные */
+  font: 20pt sans-serif; /* Параметры шрифта в контролах тоже не наследуются от body */
+}
+#buttons > div button {
+  padding: 0.7em 1.4em;
+  font-size: 32pt
+}
+#btn_arrow_up {
+  background-color: #d5e8ee
+}
+#btn_arrow_up:hover,
+#btn_arrow_up:active {
+  background-color: #edf7fa
+}
+#btn_arrow_down {
+  background-color: #008bbe
+}
+#btn_arrow_down:hover,
+#btn_arrow_down:active {
+  background-color: #3ab1dc
+}
+
+.control_title {
+  margin: 16px 0 6px;
+  font: 24pt sans-serif;
+  color: #195788
+}
+.control {
+  /*width: available;*/
+  width: 50%;
+}
+.control_wrapper {
+   background-image: linear-gradient(90deg, #95a6b3, #cbd4d9);
+   padding: 8px;
+   border-radius: 8px;
+   width: 85%;
+   margin: 0 auto
+}
+
+#light > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr
+}
+#light > div button {
+  padding: 0.7em 1.4em;
+}
+
+/* Кнопка 0 */
+#btn_light_0 {
+  background-color: #00feff
+}
+#btn_light_0:hover,
+#btn_light_0:active {
+  background-color: #b7feff
+}
+/* Кнопка выкл. */
+#btn_light_off {
+  background-color: #008bbe
+}
+#btn_light_off:hover,
+#btn_light_off:active {
+  background-color: #3ab1dc
+}
+/* кнопка 1 */
+#btn_light_1 {
+  background-color: #008f01
+}
+#btn_light_1:hover,
+#btn_light_1:active {
+  background-color: #03bc04
+}
+
+nav>header,
+nav>ul {
+  text-align: center;
+  margin: 0
+}
+
+nav>header {
+  display: block;
+  background-color: #d5e8ee;
+  color: #00457c;
+  border-bottom: 2px solid #00457c;
+  text-transform: uppercase
+}
+
+ul.regulate {
+  padding-left: 0
+}
+
+ul.regulate li {
+  list-style: none;
+  padding: .9em 0;
+}
+ul.regulate li:hover {
+  text-decoration: underline
+}
+
+/*Это ещё один способ разукрашивать регулировки уровня*/
+/*возможно, он более удобный в плане автоматизации*/
+ul.regulate li:first-child {
+  padding: 0.8em 0;
+  background-color: #d5e8ee
+}
+ul.regulate li:nth-child(2) {
+  background-color: #96cbdb
+}
+ul.regulate li:nth-child(3) {
+  background-color: #008bbe
+}
+ul.regulate li:nth-child(4) {
+  background-color: #195788
+}
+ul.regulate li:nth-child(5) {
+  background-color: #04396d
+}
+ul.regulate li:nth-child(6) {
+  background-color: #001b48
+}
+
+footer {
+  padding: 1em 0
+}
+
+footer>div {
+  width: max-content;
+  margin: 0 auto
+}

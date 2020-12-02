@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="aqua_medical.js"></script>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+
+<body>
+  <header>
+    <section class="logo" style="display: flex;">
+      <img src="logo.png">
+    </section>
+    <section class="clock">
+      <div>14:00</div>
+    </section>
+  </header>
+  <main>
+    <nav>
+      <header>Глубина</header>
+      <ul class="regulate">
+        <li onclick=onLevelClick(event)>0</li>
+        <li onclick=onLevelClick(event)>-300</li>
+        <li onclick=onLevelClick(event)>-600</li>
+        <li onclick=onLevelClick(event)>-900</li>
+        <li onclick=onLevelClick(event)>-1200</li>
+        <li onclick=onLevelClick(event)>-1500</li>
+      </ul>
+    </nav>
+    <section class="content"> 
+      <!-- Я все три figure обернул в один див; это чтобы центровка по вертикали работала корректно -->
+      <div>
+        <figure id="buttons">
+          <p class="buttons_title">Stop</p>
+          <div>
+            <!-- Кнопки лучше регулировать по id -->
+            <!-- Извиняй, картинки резать -- не до этого ща -->
+            <button onclick="return false" id="btn_arrow_up">v</button>
+            <button onclick="return false" id="btn_arrow_down">^</button>
+          </div>
+        </figure>
+        <figure id="hydromassage">
+          <p class="control_title">Гидромассаж</p>
+          <div class="control_wrapper"><input id="ctrl1" min="0" max="120" step="10" type="range" class="control"></div>
+        </figure>
+        <figure id="light">
+          <p class="control_title">Подсветка</p>
+          <div>
+            <button onclick="return false" id="btn_light_0">0</button>
+            <button onclick="return false" id="btn_light_off">Выкл</button>
+            <button onclick="return false" id="btn_light_1">1</button>
+          </div>
+        </figure>
+      </div>
+    </section> <!-- end of .content -->
+  </main>
+  <footer>
+    <div>Текущая глубина бассейна <span id="depth">1200</span> мм</div>
+  </footer>
+</body>
+
+</html>
